@@ -1,0 +1,45 @@
+#Assignment 1
+count =0
+for i in range(1,1001):
+    if i%7 and i%11:
+        count+=1
+print(count)
+
+#Assignment 2
+def is_armstrong_number(x):
+#we have to change the input to string to iterate
+    digits=str(x)
+    n=len(digits)
+    sum_numbers=0
+    for digit in digits:
+        sum_numbers+=int(digit)**n
+    return sum_numbers==x
+x=153
+if is_armstrong_number(x):
+    print(f"{x} is an Armstrong number.")
+else:
+    print(f"{x} is not an Armstrong number.")
+
+#Assignment 3
+def merge_dictionaries(dict1, dict2):
+    merged_dict = dict1.copy()
+    for key, value in dict2.items():
+        if key in merged_dict:
+            merged_dict[key] += value
+        else:
+            merged_dict[key] = value
+    return merged_dict
+
+
+#Assignment 4
+sq_dict = {}
+for i in range(1, 6):
+    squares_dict = {i: i**2 }
+
+print(sq_dict)
+
+#Assignment 5
+def are_disjoint(set1, set2):
+    # Check if the intersection of the two sets is empty
+    return set1.isdisjoint(set2)
+
