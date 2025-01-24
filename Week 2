@@ -1,1 +1,152 @@
-dukf ty
+#Assignment 1
+number = 0
+
+if number < 0:
+    print("Negative number")
+elif number == 0:
+    print("The number is zero")
+else:
+    print("Positive number")
+
+
+#Assignment 2
+age = int(input())  # Takes input from the user
+
+if age < 0:
+    print("Invalid input")  # Handles negative age values
+elif 0 <= age <= 12:
+    print("Child")  # For ages 0 to 12
+elif 13 <= age <= 19:
+    print("Teenager")  # For ages 13 to 19
+elif 20 <= age <= 59:
+    print("Adult")  # For ages 20 to 59
+else:
+    print("Senior")  # For ages 60 and above
+
+
+#Assignment 3
+score=int(input())
+if score >= 90:
+        print ("Grade A")
+elif 80 <= score < 90:
+        print("Grade B")
+elif 70 <= score < 80:
+        print("Grade C")
+elif 60 <= score < 70:
+        print("Grade D")
+else:
+        print ("Grade F")
+
+
+#Assignment 4
+for i in range(1,11):
+    print(i)
+
+
+
+#Assignment 5
+Number = int(input())
+while Number > 0:
+    Number = Number - 1  
+    print(Number)
+
+#Assignment 1 (Intermediate)
+Total = 0 
+for i in range(0, 51, 2):  
+    Total += i 
+
+print("The sum of even numbers from 0 to 50 is:", Total)
+
+
+#Assignment 2   (Intermediate)
+import random
+
+Correct_guess = random.randint(1, 20)  
+Count = 0
+max_count = 5
+
+while Count < max_count:
+    Guess = int(input())  
+    Count += 1  
+
+    if Guess == Correct_guess:
+        print("Congratulations! You guessed it!")
+        break  
+    elif Guess < Correct_guess:
+        print("Too low! Try again.")
+    else:
+        print("Too high! Try again.")
+
+    if Count == max_count:
+        print("Game Over!")
+
+
+
+#Assignment 3
+password=input()
+if password=="python123":
+    print ("Access Granted")
+else:
+    print ("Try Again")
+
+
+
+#Assignment 4 (Intermediate)
+i = 1
+while i <= 5: 
+    j = 1
+    while j <= i:  
+        print("*", end="")
+        j += 1
+    print()  
+    i += 1  
+
+#Assignment 5 (Intermediate)
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+
+#Assignment 1 (Advanced)
+score=int(input())
+if score < 0 or score > 100:
+    print ("Invalid score")
+elif score >= 90:
+        print ("Grade A")
+elif 80 <= score < 90:
+        print("Grade B")
+elif 70 <= score < 80:
+        print("Grade C")
+elif 60 <= score < 70:
+        print("Grade D")
+elif 0<= score < 60:
+        print ("Grade F")
+
+
+#Assignment 3  (Advanced)
+Number=input()
+Total=0
+for i in Number:
+    Total+=1
+    print(Total)
+
+#Assignment 4  (Advanced)
+number = int(input("Enter a number: "))
+
+while number >= 2:
+    is_prime = True
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            is_prime = False
+            break
+    
+    if is_prime:
+        print("Prime number")
+    else:
+        print("Not a prime number")
+
+
+#Assignment 5 (Advanced)
+
+
