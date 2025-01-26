@@ -1,0 +1,110 @@
+#Assignment 1 (Beginner)
+def greet(name):
+    return (f"Hello, {name}! Welcome to the world of Python!")
+
+
+#Assignment 2 (Beginner)
+def make_pancake(flour,eggs,milk):
+    return min(int(flour*4),int(eggs*4),int(milk*4))
+total=make_pancake(3,2,2)
+print(f"{total} pancakes")
+
+#Assignment 3 (Beginner)
+def convert_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+fahrenheit_temperature = convert_to_fahrenheit(20)
+
+# Print the result
+print(f"{fahrenheit_temperature}")
+
+#Assignment 4 (Beginner)
+def add_two_numbers(num1, num2):
+    return num1+num2
+sum=add_two_numbers(3,7)
+print(sum)
+
+#Assignment 5 (Beginner)
+def personalized_welcome(name):
+    print(f" Welcome, {name}! You are doing amazing!")
+personalized_welcome("Dre")
+
+#Assignment 1 (Intermediate)
+def math_quiz(num1, num2):
+    sums=num1 + num2
+    difference=num1-num2
+    product=num1*num2
+    quotient=num1/num2
+    return sums,difference,product,quotient
+math=math_quiz(5,3)
+print(math)
+
+
+#Assignment 2 (Intermediate)
+def magic_box(item1, item2):
+    print(f"You have placed {item1} and {item2} in the magic box!")
+magic_box("a book","a pen")
+
+#Assignment 3 (Intermediate)
+def can_fly(power_level):
+    return "You can fly!" if power_level>100 else "Try again"
+print(can_fly(13))
+
+#Assignment 4 (Intermediate)
+def calculate_area(shape, dimension1, dimension2=0):
+    if shape=="rectangle":
+        return dimension1*dimension2
+    elif shape=="square":
+        return dimension1*dimension1
+    else:
+        "Invalid shape"
+area_square=calculate_area("square",5)
+print(area_square)
+area_rec=calculate_area("rectangle",5,7)
+print(area_rec)
+
+
+#Assignment 5 (Intermediate)
+def calculate_discount(price, discount_percentage):
+    return price*(100-discount_percentage)/100
+print(calculate_discount(100,20))
+
+
+#Assignment 1 (Advanced )
+def is_palindrome(word):
+    return "It’s a palindrome!" if word==word[::-1] else "Not a palindrome!"
+print(is_palindrome("Hello"))
+
+
+#Assignment 2 *Advanced)
+def mystery_calculation(a, b, c):
+    return ((a + b) * c) / 2
+print(mystery_calculation(5,7,10))
+
+
+#Assignment 3 (Advanced)
+def generate_fibonacci(n):
+    fib_sequence=[0,1]
+    while len(fib_sequence)<n:
+        fib_sequence.append((fib_sequence[-1]+fib_sequence[-2]))
+    return fib_sequence
+print(generate_fibonacci(5))
+
+
+#Assignment 4
+def count_word_frequency(text, word):
+    words = text.lower().split()
+    return words.count(word.lower())
+words="Python is fun, Python is powerful"
+print(count_word_frequency(words,"python"))
+
+
+#Assignment 5
+def find_mystery_number(numbers):
+  evens = []
+  for number in numbers:
+    if number % 2 == 0:
+      evens.append(number)
+  return max(evens)
+print(find_mystery_number(([3, 5, 7, 8, 12, 14])))
+
