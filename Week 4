@@ -10,3 +10,13 @@ print(sum([5, 10, 15] ))
 #Assignment 4  (Beginner)
 print(min( [8, 3, 12, 7] ))
 
+#Assignment 5 (Beginner 5)
+word = input("Enter a word: ")
+print(word.upper())
+
+
+#Assignment 1 (Intermediate)
+print(sorted([10, 5, 8, 3] ))
+
+#Assignment 2 (Intermediate)
+print(sorted([10, 5, 8, 3] ,reverse=True))
