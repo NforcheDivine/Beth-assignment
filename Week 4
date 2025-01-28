@@ -1,0 +1,12 @@
+#Assignment 1 (Beginner)
+print(len('Hello World!'))
+
+#Assignment 2  (Beginner)
+print(type(3.14))
+
+#Assignment 3  (Beginner)
+print(sum([5, 10, 15] ))
+
+#Assignment 4  (Beginner)
+print(min( [8, 3, 12, 7] ))
+
