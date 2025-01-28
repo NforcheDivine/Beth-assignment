@@ -19,4 +19,26 @@ print(word.upper())
 print(sorted([10, 5, 8, 3] ))
 
 #Assignment 2 (Intermediate)
+dre=[3,5,7,8]
+sp=filter(lambda a:a%2==0,dre)
+print(list(sp))
+
+#Assignment 3 (Intermediate)
 print(sorted([10, 5, 8, 3] ,reverse=True))
+
+#Assignment 4 (Intermediate)
+print(round(3.7654,2))
+
+#Assignment 5 (Intermediate)
+numbers =  [2, 4, 6, 8]
+squares = map(lambda x: x**2, numbers)
+print(list(squares))
+OR
+dre=[3,5,7,8]
+sp=map(lambda a:a**2,dre)
+print(list(sp))
+
+#Assignment 1 (Advanced)
+expression = '5 + 10' 
+print(eval(expression)) 
+
