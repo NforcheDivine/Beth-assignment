@@ -1,0 +1,74 @@
+#Assignment 1 (Beginner)
+def divide_numbers(a, b):
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+#Assignment 2 (Beginner)
+try:
+    num = int(input("Enter an integer: "))
+    print(f"You entered: {num}")
+except ValueError:
+    print("Invalid input! Please enter a valid integer.")
+
+#Assiognment 3 (Beginner)
+try:
+    age = int(input("Enter your age: "))
+    print(f"Your age is: {age}")
+except ValueError:
+    print("Invalid input! Please enter a valid integer for your age.")
+
+#Assignment 4 (Beginner)
+def convert_to_int_list(str_list):
+    int_list = []
+    for item in str_list:
+        try:
+            int_list.append(int(item))
+        except ValueError:
+            print(f"Error: Cannot convert '{item}' to an integer.")
+    return int_list
+
+#Assignment 5 (Beginner)
+def access_list_item(my_list, index):
+    try:
+        return my_list[index]
+    except IndexError:
+        print("Index out of range")
+        return None  # Return None to indicate failure
+
+
+ #Assignment 1 (Intermediate)
+def get_key_value(dictionary, key):
+    try:
+        return dictionary[key]
+    except KeyError:
+        print(f"Key '{key}' not found in the dictionary.")
+        return None  # Return None to indicate the key is missing
+#Assignment 2 (Intermediate)
+class InvalidHeightError(Exception):
+    """Custom exception for invalid height values."""
+    pass
+
+def calculate_bmi(weight, height):
+    if height <= 0:
+        raise InvalidHeightError("Height must be greater than zero.")
+    return weight / (height ** 2)
+
+#Assignment 3
+def add_numbers(a, b):
+    # Check if both arguments are integers
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise TypeError("Both arguments must be integers.")
+    
+    return a + b
+
+#Assignment 4
+def safe_division(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero.")
+        return None
+    else:
+        print("Division successful!")
+        return result
