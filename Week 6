@@ -1,0 +1,189 @@
+#Assignment 1 (Beginner)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+#Assignment 2 (Beginner)
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        return self.length * self.width
+
+#Assignment 3 (Beginner)
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display_details(self):
+        print(f"Student Name: {self.name}")
+        print(f"Marks: {self.marks}")
+        print("-" * 20)
+
+#Assignment 4 (Beginner)
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def display_details(self):
+        print(f"Title: {self.title}")
+        print(f"Author: {self.author}")
+        print("-" * 20)
+
+#Assignment 5 (Beginner)
+class Laptop:
+    def __init__(self, brand, processor, ram):
+        self.brand = brand
+        self.processor = processor
+        self.ram = ram
+
+    def print_specifications(self):
+        print(f"Brand: {self.brand}")
+        print(f"Processor: {self.processor}")
+        print(f"RAM: {self.ram}GB")
+        print("-" * 20)
+
+#Assignment 1 (Intermediate)
+class BankAccount:
+    def __init__(self, owner, initial_balance=0):
+        self.owner = owner
+        self.__balance = initial_balance  # Private attribute
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited ${amount}. New balance: ${self.__balance}")
+        else:
+            print("Deposit amount must be positive!")
+
+    def withdraw(self, amount):
+        if amount > 0:
+            if amount <= self.__balance:
+                self.__balance -= amount
+                print(f"Withdrew ${amount}. New balance: ${self.__balance}")
+            else:
+                print("Insufficient funds!")
+        else:
+            print("Withdrawal amount must be positive!")
+
+    def get_balance(self):
+        return self.__balance  # Accessor method to get balance
+
+#Assignment 2 (Intermediate)
+import math
+
+# Base class
+class Shape:
+    def area(self):
+        pass  # This method will be overridden in derived classes
+
+# Derived class for Circle
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2  # Area of a circle: π * r^2
+
+# Derived class for Rectangle
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width  # Area of a rectangle: length * width
+
+#Assignment 3 (Intermediate)
+class Vehicle:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def display_details(self):
+        return f"Brand: {self.brand}, Model: {self.model}, Year: {self.year}"
+
+# Derived class Car
+class Car(Vehicle):
+    def __init__(self, brand, model, year, seats, fuel_type):
+        super().__init__(brand, model, year)  # Initialize base class attributes
+        self.seats = seats
+        self.fuel_type = fuel_type
+
+    def display_details(self):
+        vehicle_details = super().display_details()
+        return f"{vehicle_details}, Seats: {self.seats}, Fuel Type: {self.fuel_type}"
+
+# Derived class Bike
+class Bike(Vehicle):
+    def __init__(self, brand, model, year, engine_capacity, bike_type):
+        super().__init__(brand, model, year)  # Initialize base class attributes
+        self.engine_capacity = engine_capacity
+        self.bike_type = bike_type
+
+    def display_details(self):
+        vehicle_details = super().display_details()
+        return f"{vehicle_details}, Engine Capacity: {self.engine_capacity}cc, Bike Type: {self.bike_type}"
+
+#Assignment 4 (Intermediate)
+# ShoppingCart class
+class ShoppingCart:
+    def __init__(self):
+        self.items = []  # List to store the items in the cart
+
+    def add_item(self, item):
+        """Method to add an item to the cart"""
+        self.items.append(item)
+        print(f"'{item}' has been added to the cart.")
+
+    def remove_item(self, item):
+        """Method to remove an item from the cart"""
+        if item in self.items:
+            self.items.remove(item)
+            print(f"'{item}' has been removed from the cart.")
+        else:
+            print(f"'{item}' is not in the cart.")
+
+    def view_cart(self):
+        """Method to view all items in the cart"""
+        if self.items:
+            print("Items in the cart:")
+            for item in self.items:
+                print(f"- {item}")
+        else:
+            print("The cart is empty.")
+
+#Assignment 5 (Intermediate)
+class Employee:
+    def __init__(self, name, experience_level):
+        self.name = name  # Employee's name
+        self.experience_level = experience_level  # Experience level (Junior, Mid, Senior)
+        self.base_salary = 50000  # Base salary for a Junior employee
+
+    def calculate_salary(self):
+        """Method to calculate salary based on experience level"""
+        if self.experience_level.lower() == "junior":
+            salary = self.base_salary
+        elif self.experience_level.lower() == "mid":
+            salary = self.base_salary * 1.5  # Mid-level employees earn 50% more
+        elif self.experience_level.lower() == "senior":
+            salary = self.base_salary * 2  # Senior employees earn twice the base salary
+        else:
+            raise ValueError("Invalid experience level. Choose from 'Junior', 'Mid', or 'Senior'.")
+        
+        return salary
+
+    def display_employee_details(self):
+        """Method to display employee details"""
+        print(f"Employee Name: {self.name}")
+        print(f"Experience Level: {self.experience_level.capitalize()}")
+        print(f"Salary: ${self.calculate_salary():,.2f}")
